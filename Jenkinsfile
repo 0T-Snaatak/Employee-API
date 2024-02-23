@@ -6,10 +6,13 @@ def employeeCI = new org.avengers.template.employeeCI.EmployeeCi()
 node {
     
     def url = 'https://github.com/CodeOps-Hub/Employee-API.git'
-    def creds = 'vishal-cred'
     def branch = 'feature/employeeCI'
+    def gitLeaksVersion = '8.18.2'
+    def reportName = 'credScanReport.json'
+    def depVersion = '9.0.9'
+    def javaVersion = '17'
     
     
-    employeeCI.call(url, creds, branch)
+    employeeCI.call(url, branch, gitLeaksVersion, reportName, depVersion, javaVersion)
     
 }
