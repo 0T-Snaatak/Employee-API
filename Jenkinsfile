@@ -12,7 +12,6 @@ node {
     def depVersion = '9.0.9'
     def javaVersion = '17'
     
-    
-    employeeCi.call(url, branch, gitLeaksVersion, reportName, depVersion, javaVersion)
+    employeeCi.call(branch: branch,url: url, gitLeaksVersion, reportName, depVersion, javaVersion)
     
 }
