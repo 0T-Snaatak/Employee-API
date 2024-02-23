@@ -1,4 +1,3 @@
-
 @Library('snaatak-p7') _
 
 def employeeCi = new org.avengers.template.employeeCI.EmployeeCi()
