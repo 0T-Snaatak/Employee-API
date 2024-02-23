@@ -1,7 +1,7 @@
 
 @Library('snaatak-p7') _
 
-def employeeCI = new org.avengers.template.employeeCI.EmployeeCi()
+def employeeCi = new org.avengers.template.employeeCI.EmployeeCi()
 
 node {
     
@@ -13,6 +13,6 @@ node {
     def javaVersion = '17'
     
     
-    employeeCI.call(url, branch, gitLeaksVersion, reportName, depVersion, javaVersion)
+    employeeCi.call(url, branch, gitLeaksVersion, reportName, depVersion, javaVersion)
     
 }
