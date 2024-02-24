@@ -11,7 +11,7 @@ node {
     def depVersion = '9.0.9'
     def javaVersion = '17'
     def uniTestReport = 'coverage.html'
-    def BugAnalysisreport = 'BugAnalysisreport,html'
+    def BugAnalysisreport = 'BugAnalysisreport.html'
     def depreport = 'dep-check.html'
     
     employeeCi.call(branch: branch,url: url, gitLeaksVersion, depVersion, javaVersion, gitLeaksReport, uniTestReport, BugAnalysisreport, depreport)
