@@ -1,0 +1,19 @@
+@Library('snaatak-p7') _
+
+def employeeCi = new org.avengers.template.employeeCI.EmployeeCi()
+
+node {
+    
+    def url = 'https://github.com/CodeOps-Hub/Employee-API.git'
+    def branch = 'feature/employeeCI'
+    def gitLeaksVersion = '8.18.2'
+    def gitLeaksReport = 'credScanReport.json'
+    def depVersion = '9.0.9'
+    def javaVersion = '17'
+    def uniTestReport = 'coverage.html'
+    def BugAnalysisreport = 'BugAnalysisreport.html'
+    def depreport = 'dep-check.html'
+    
+    employeeCi.call(branch: branch,url: url, gitLeaksVersion, depVersion, javaVersion, gitLeaksReport, uniTestReport, BugAnalysisreport, depreport)
+    
+}
